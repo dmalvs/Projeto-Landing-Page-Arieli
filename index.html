@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arieli Rigueiro</title>
+    <style>
+        @font-face { /* definindo a fonte do projeto*/
+                font-family: 'Inter';
+                src: url(font/Inter-Bold.ttf); 
+            }
+        /*Variáveis globais de cor para facilitar a mudança*/
+        :root{
+            --color-white:  #fff; /*  */
+            --color-white2:  #e6e3e3; /* */
+            --color-dark1:  #272727; /* */
+            --color-bgh:  #E6F3FF; /* cor do background hover do botão */
+            --color-dark3:  #414141; /* */
+            --color-dark4:  #1c1c1c; /* */
+            --color-dark5:  #343434; /* */
+            --color-text: #5E99DC; /* cor do texto botão/body */
+            --color-btnc: #E0B4D9; /* cor do texto botão contato */
+           
+        }
+        /*remover do conteúdo as mergens e o padding*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Inter; /* mudar fonte */
+            background-color: var(--color-white); /* cor do background */
+            color: var(--color-white); /* Cor da fonte */
+            
+        }
+        img{
+            width: 170px; /* Largura da logo */
+        }
+        .header,
+        .navigation_header{
+            display: flex; /* layouts flexível e responsivo, facilitando o alinhamento e a distribuição de elementos dentro de um container */
+            flex-direction: row; /* mudar a forma do display */
+            align-items: center; /* alinhar os items no centro */
+        }
+        .header{
+            background-color: var(--color-bgh);
+            box-shadow: 1px 1px 4px var(--color-white2); /* sombra do header */
+            height: 100px; /* altura do header */
+            justify-content: space-between; /*alinhar os itens de um container flexível no seu eixo principal*/      /* */
+            padding: 0% 10%; /* espaçamento da borda, na direita e esquerda */
+        }
+        .navigation_header{
+            gap: 3em;
+        }
+        /* usa se "a" para referir aos links */
+        .navigation_header a{ /* parte do cabeçalho com os botões */
+            text-decoration: none;
+            color: var(--color-text);
+            transition: 1s; /* transição da cor */
+            font-weight: bold; /* Deixar em negrito */
+        }
+        button {
+            background-color: var(--color-bgh);
+            padding: 8px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s; /* transição para mudança de cor dos botões */
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: rgb(222, 236, 250);
+        }
+
+        .btncontato{ /* CSS do botão contato */
+            background-color: var(--color-btnc);
+            width: 90px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition-duration: 0.4s; /* transição para mudança de cor dos botões */
+            border: none;
+            border-radius: 5px;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="logo_header">
+            <a href="index.html"><img src="imagens/logo.png" alt="logo"></a>
+        </div>
+         <!--Opções do cabeçalho-->
+            <div class="navigation_header"> 
+                <button><a href="#">Home</a></button>
+                <button><a href="#">Sobre</a></button>
+                <button><a href="#">Benefícios</a></button>
+                <button><a href="#">Serviços</a></button>
+                <button class="btncontato"><a href="#">Contato</a></button>
+
+            </div>
+    </div>
+
+    <div class="titulo" id="titulo">
+        <h1 style="color:var(--color-text); font-family: Inter" >Transformo desafios em conquistas<br>na fala e linguagem:<br> com ciência, brincadeira e amor.</h1>
+
+    </div>
+   
+</body>
+</html>
