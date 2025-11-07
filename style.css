@@ -43,7 +43,7 @@
         .header{
             background-color: var(--color-bgh);
             box-shadow: 1px 1px 4px var(--color-white2); /* sombra do header */
-            height: 100px; /* altura do header */
+            height: 90px; /* altura do header */
             justify-content: space-between; /*alinhar os itens de um container flexível no seu eixo principal*/      /* */
             padding: 0% 10%; /* espaçamento da borda, na direita e esquerda */
         }
@@ -57,7 +57,8 @@
             transition: 1s; /* transição da cor */
             font-weight: bold; /* Deixar em negrito */
         }
-        button {
+        .btnheader {
+            color: var(--color-text);
             background-color: var(--color-bgh);
             padding: 8px 20px;
             text-align: center;
@@ -67,6 +68,9 @@
             transition-duration: 0.4s; /* transição para mudança de cor dos botões */
             border: none;
             border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            
         }
 
         button:hover {
@@ -108,26 +112,37 @@
         .rodape{ /* CSS do rodapé */
             background-color: var(--color-bgh);
             font-family: Inter;
-            margin-top: 100px;
+            margin-top: 10px;
             width: 100%;
-            height: 100px;
-            position: fixed; /* fixa o rodapé na parte inferior da página */
+            height: 40px;
+            /*position: fixed;  fixa o rodapé na parte inferior da página */
             bottom: 0;
             left: 0;
-            color: var(--color-text);
+            
         }
 
         .rodape p{ /* CSS do texto do rodapé */
             color: var(--color-text);
             font-size: 10px;
             text-align: center;
-            padding: 80px 0px;
+            padding: 15px 0px;
         }
 
         .imagem_inicio{ /* CSS da imagem inicial */
             width: 300px;
             height: auto;
             position: absolute;
-            top: 120px;
-            right: 100px;
+            top: 50px;
+            right: 200px;
+        }
+        section{
+            color: #1c1c1c;
+        }
+        #sectionserv{  /* CSS da seção de serviços */
+            background-color:var(--color-btnc);
+
+        }
+         #sectionhome{  /* CSS da seção de serviços */
+            background-color:var(--color-white);
+
         }

@@ -13,28 +13,62 @@
         </div>
          <!--Opções do cabeçalho-->
             <div class="navigation_header"> 
-                <button><a href="#">Home</a></button>
-                <button><a href="#">Sobre</a></button>
-                <button><a href="#">Benefícios</a></button>
-                <button><a href="#">Serviços</a></button>
+                <button class="btnheader"><a href="#">Home</a></button>
+                <button class="btnheader">Sobre</button>
+                <button class="btnheader"><a href="#">Benefícios</a></button>
+                <button class="btnheader" id="scrollButtonserv"><a href="#">Serviços</a></button>
                 <button class="btncontato"><a href="#">Contato</a></button>
-
             </div>
     </div>
 
+    <section id="sectionhome">
+
     <div class="titulo" id="titulo">
         <h1>Transformo desafios em <br>conquistas na fala e linguagem:<br>com ciência, brincadeira e amor.</h1>
-        <h2 class="subtitulo" id="subtitulo"><i>Atendimento ao público infantil presencial, em São José do Rio Preto e online para outras regiões.*</i></h2>
+        <h2 class="subtitulo" id="subtitulo"><i>Atendimento ao público infantil presencial, em São José do Rio Preto e online para outras regiões.*<br></i></h2>
+
     </div>
+
+        <div class ="imagem_inicio" id="imagem_inicio">
+        <img src="imagens/Arieli-64.png" alt="Arieli Rigueiro apontando para o tablet" style="width: 400px;">
+    </div>
+
+    </section>
+
+        <!--SERVIÇOS-->
+    <section id="sectionserv">
+        <h1>Serviços teste</h1>
+    </section>
+    
     <div class="rodape" id="rodape">
         <footer>
             <p>Rua Marechal Deodoro da Fonseca 1917, São José do Rio Preto - SP.</p>
         </footer>
     </div>
    
-    <div class ="imagem_inicio" id="imagem_inicio">
-        <img src="imagens/Arieli-64.png" alt="Arieli Rigueiro apontando para o tablet">
-    </div>
 
+
+
+
+
+    <!--JAVASCRIPT-->
+
+     <script>
+    // Seleciona o botão e a seção de destino
+    const buttonserv = document.getElementById('scrollButtonserv');
+    const buttonhome = document.getElementById('scrollButtonhome');
+    const targetSectionhome = document.getElementById('sectionhome');
+    const targetSection = document.getElementById('sectionserv');
+
+    // Adiciona o evento de clique ao botão
+    buttonserv.addEventListener('click', () => {
+      // Rola suavemente até a seção de destino
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+    buttonhome.addEventListener('click', () => {
+      // Rola suavemente até a seção de destino
+      targetSectionhome.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
