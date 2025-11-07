@@ -4,117 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arieli Rigueiro</title>
-    <style>
-        @font-face { /* definindo a fonte do projeto*/
-                font-family: 'Inter';
-                src: url(font/Inter-Bold.ttf); 
-            }
-        /*Variáveis globais de cor para facilitar a mudança*/
-        :root{
-            --color-white:  #fff; /*  */
-            --color-white2:  #e6e3e3; /* */
-            --color-dark1:  #272727; /* */
-            --color-bgh:  #E6F3FF; /* cor do background hover do botão */
-            --color-dark3:  #414141; /* */
-            --color-dark4:  #1c1c1c; /* */
-            --color-dark5:  #343434; /* */
-            --color-text: #5E99DC; /* cor do texto botão/body */
-            --color-btnc: #E0B4D9; /* cor do texto botão contato */
-           
-        }
-        /*remover do conteúdo as mergens e o padding*/
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            font-family: Inter; /* mudar fonte */
-            background-color: var(--color-white); /* cor do background */
-            color: var(--color-white); /* Cor da fonte */
-            
-        }
-        img{
-            width: 170px; /* Largura da logo */
-        }
-        .header,
-        .navigation_header{
-            display: flex; /* layouts flexível e responsivo, facilitando o alinhamento e a distribuição de elementos dentro de um container */
-            flex-direction: row; /* mudar a forma do display */
-            align-items: center; /* alinhar os items no centro */
-        }
-        .header{
-            background-color: var(--color-bgh);
-            box-shadow: 1px 1px 4px var(--color-white2); /* sombra do header */
-            height: 100px; /* altura do header */
-            justify-content: space-between; /*alinhar os itens de um container flexível no seu eixo principal*/      /* */
-            padding: 0% 10%; /* espaçamento da borda, na direita e esquerda */
-        }
-        .navigation_header{
-            gap: 3em;
-        }
-        /* usa se "a" para referir aos links */
-        .navigation_header a{ /* parte do cabeçalho com os botões */
-            text-decoration: none;
-            color: var(--color-text);
-            transition: 1s; /* transição da cor */
-            font-weight: bold; /* Deixar em negrito */
-        }
-        button {
-            background-color: var(--color-bgh);
-            padding: 8px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            transition-duration: 0.4s; /* transição para mudança de cor dos botões */
-            border: none;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: rgb(222, 236, 250);
-        }
-
-        .btncontato{ /* CSS do botão contato */
-            background-color: var(--color-btnc);
-            width: 90px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 16px;
-            transition-duration: 0.4s; /* transição para mudança de cor dos botões */
-            border: none;
-            border-radius: 5px;
-        }
-        .titulo{ /* CSS da parte de entrada do site */
-            color: var(--color-text);
-            font-family: Inter;
-            text-align: center;
-            justify-content: left;
-        }
-
-        .rodape{ /* CSS do rodapé */
-            background-color: var(--color-bgh);
-            font-family: Inter;
-            margin-top: 100px;
-            width: 100%;
-            height: 100px;
-            position: fixed; /* fixa o rodapé na parte inferior da página */
-            bottom: 0;
-            left: 0;
-            color: var(--color-text);
-        }
-
-        .rodape p{ /* CSS do texto do rodapé */
-            color: var(--color-text);
-            font-size: 10px;
-            text-align: center;
-            padding: 80px 0px;
-        }
-
-    </style>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header" id="header">
@@ -133,8 +23,8 @@
     </div>
 
     <div class="titulo" id="titulo">
-        <h1>Transformo desafios em conquistas<br>na fala e linguagem:<br>com ciência, brincadeira e amor.</h1>
-
+        <h1>Transformo desafios em <br>conquistas na fala e linguagem:<br>com ciência, brincadeira e amor.</h1>
+        <h2 class="subtitulo" id="subtitulo"><i>Atendimento ao público infantil presencial, em São José do Rio Preto e online para outras regiões.*</i></h2>
     </div>
     <div class="rodape" id="rodape">
         <footer>
@@ -142,5 +32,9 @@
         </footer>
     </div>
    
+    <div class ="imagem_inicio" id="imagem_inicio">
+        <img src="imagens/Arieli-64.png" alt="Arieli Rigueiro apontando para o tablet">
+    </div>
+
 </body>
 </html>
