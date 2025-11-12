@@ -19,6 +19,7 @@
             --color-dark5:  #343434; /* */
             --color-text: #5E99DC; /* cor do texto botão/body */
             --color-btnc: #E0B4D9; /* cor do texto botão contato */
+            --color-zap: #62C370; /* cor dos botões do whatsapp */
            
         }
         /*remover do conteúdo as mergens e o padding*/
@@ -55,7 +56,7 @@
         .navigation_header a{ /* parte do cabeçalho com os botões */
             text-decoration: none;
             color: var(--color-text);
-            transition: 1s; /* transição da cor */
+            transition: 0.0s; /* transição da cor */
             font-weight: bold; /* Deixar em negrito */
         }
         .btnheader {
@@ -66,38 +67,86 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            transition-duration: 0.4s; /* transição para mudança de cor dos botões */
+            transition-duration: 0.0s; /* transição para mudança de cor dos botões */
             border: none;
-            border-radius: 5px;
+            border-radius: 60px;
             cursor: pointer;
             font-weight: bold;
             
         }
 
+
         button:hover {
             background-color: rgb(222, 236, 250);
+            border: 2px solid var(--color-text);
+            transition-duration: 0.0s;
         }
 
         .btncontato{ /* CSS do botão contato */
+            display: inline-block;
+            font-family: Inter2;
+            color: white;
             background-color: var(--color-btnc);
-            width: 90px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 1rem 1.5rem;
+            border: 2px solid transparent;
+            border-radius: 60px;
             text-decoration: none;
-            font-size: 16px;
-            transition-duration: 0.4s; /* transição para mudança de cor dos botões */
-            border: none;
-            border-radius: 5px;
+            font-weight: 400;
         }
+
+        .btncontato:hover { /* CSS do botão contato ao passar o mouse */
+            background-color: var(--color-bgh);
+            border: 2px solid var(--color-text);
+            transition-duration: 0.5s;
+        }
+
+        .contato_inicio { /* CSS da div do botão contato na parte inicial */
+
+            display: flex;
+            text-align: center; 
+            margin-top: 1rem;
+            margin-left: 14rem;
+            justify-content: center;  
+            
+         }
+
+        .btnzap { /* CSS do botão whatsapp */
+            display: inline-block;
+            font-family: Inter2;
+            color: white;
+            background-color: var(--color-zap);
+            padding: 1rem 1.5rem;
+            border: 2px solid transparent;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 400;
+            align-items: center;
+            transition: all 0.3s ease;
+            animation: fadeIn 2.5s ease-out;
+
+        }
+
+        .btnzap:hover { /* CSS do botão whatsapp ao passar o mouse */
+            background-color: white;
+            border: 2px solid var(--color-zap);
+            transition-duration: 0.5s;
+            transform: translateY(-3px);
+
+        }
+
+
         .titulo{ /* CSS da parte de entrada do site */
             color: var(--color-text);
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
             font-size: 22px;
             font-family: Inter;
             text-align: left;
-            padding-top: 60px;
-            padding-left: 60px;
+            padding: 2rem 3%;
+            
         }
 
         .subtitulo{ /* CSS do subtítulo */
@@ -109,12 +158,6 @@
             padding-left: 8px;
             font-weight: normal;
         }
-
-        .contato_inicio{ /* CSS do botão contato na parte inicial */
-            margin-top: 20px;
-            margin-left: 8px;
-        }
-
 
         .rodape{ /* CSS do rodapé */
             background-color: var(--color-bgh);
@@ -145,6 +188,7 @@
         }
 
         .icones{ /* CSS dos ícones no rodapé */
+            margin: 1.5rem;
             color: var(--color-text);
             font-size: 25px;
             margin-top: -30px;
@@ -152,12 +196,18 @@
             text-align: left;
         }
 
+        .icones a {
+            color: var(--color-text);
+            margin-right: 15px;
+
+        }
+
         .imagem_inicio{ /* CSS da imagem inicial */
             width: 300px;
             height: auto;
-            position: absolute;
+            position: fixed;
             top: 50px;
-            right: 200px;
+            right: 400px;
         }
         section{
             color: #1c1c1c;
