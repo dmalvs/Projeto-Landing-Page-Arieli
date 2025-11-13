@@ -1,222 +1,254 @@
- @font-face { /* definindo a fonte do projeto*/
-                font-family: 'Inter';
-                src: url(font/Inter-Bold.ttf); 
+    @font-face { /* definindo a fonte do projeto*/
+                    font-family: 'Inter';
+                    src: url(font/Inter-Bold.ttf); 
+                }
+
+    @font-face {
+                font-family: 'Inter2';
+                src: url(font/InterVariable.ttf);
+
+    }
+            /*Variáveis globais de cor para facilitar a mudança*/
+            :root{
+                --color-white:  #fff; /*  */
+                --color-white2:  #e6e3e3; /* */
+                --color-dark1:  #272727; /* */
+                --color-bgh:  #E6F3FF; /* cor do background hover do botão */
+                --color-dark3:  #414141; /* */
+                --color-dark4:  #1c1c1c; /* */
+                --color-dark5:  #343434; /* */
+                --color-text: #5E99DC; /* cor do texto botão/body */
+                --color-btnc: #E0B4D9; /* cor do texto botão contato */
+                --color-zap: #62C370; /* cor dos botões do whatsapp */
+            
+            }
+            /*remover do conteúdo as mergens e o padding*/
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                font-family: Inter; /* mudar fonte */
+                background-color: var(--color-white); /* cor do background */
+                color: var(--color-white); /* Cor da fonte */
+                
+            }
+            img{
+                width: 170px; /* Largura da logo */
+            }
+            .header,
+            .navigation_header{
+                display: flex; /* layouts flexível e responsivo, facilitando o alinhamento e a distribuição de elementos dentro de um container */
+                flex-direction: row; /* mudar a forma do display */
+                align-items: center; /* alinhar os items no centro */
+            }
+            .header{
+                background-color: var(--color-bgh);
+                box-shadow: 1px 1px 4px var(--color-white2); /* sombra do header */
+                height: 90px; /* altura do header */
+                justify-content: space-between; /*alinhar os itens de um container flexível no seu eixo principal*/      /* */
+                padding: 0% 10%; /* espaçamento da borda, na direita e esquerda */
+            }
+            .navigation_header{
+                gap: 3em;
+            }
+            /* usa se "a" para referir aos links */
+            .navigation_header a{ /* parte do cabeçalho com os botões */
+                text-decoration: none;
+                color: var(--color-text);
+                transition: 0.0s; /* transição da cor */
+                font-weight: bold; /* Deixar em negrito */
+            }
+            .btnheader {
+                color: var(--color-text);
+                background-color: var(--color-bgh);
+                padding: 8px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                transition-duration: 0.0s; /* transição para mudança de cor dos botões */
+                border: none;
+                border-radius: 60px;
+                cursor: pointer;
+                font-weight: bold;
+                
+            }
+            button:hover {
+                background-color: rgb(222, 236, 250);
+                border: 2px solid var(--color-text);
+                transition-duration: 0.0s;
             }
 
-@font-face {
-            font-family: 'Inter2';
-            src: url(font/InterVariable.ttf);
+            .btncontato{ /* CSS do botão contato */
+                display: inline-block;
+                font-family: Inter2;
+                color: white;
+                background-color: var(--color-btnc);
+                padding: 1rem 1.5rem;
+                border: 2px solid transparent;
+                border-radius: 60px;
+                text-decoration: none;
+                font-weight: 400;
+            }
 
-}
-        /*Variáveis globais de cor para facilitar a mudança*/
-        :root{
-            --color-white:  #fff; /*  */
-            --color-white2:  #e6e3e3; /* */
-            --color-dark1:  #272727; /* */
-            --color-bgh:  #E6F3FF; /* cor do background hover do botão */
-            --color-dark3:  #414141; /* */
-            --color-dark4:  #1c1c1c; /* */
-            --color-dark5:  #343434; /* */
-            --color-text: #5E99DC; /* cor do texto botão/body */
-            --color-btnc: #E0B4D9; /* cor do texto botão contato */
-            --color-zap: #62C370; /* cor dos botões do whatsapp */
-           
-        }
-        /*remover do conteúdo as mergens e o padding*/
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            font-family: Inter; /* mudar fonte */
-            background-color: var(--color-white); /* cor do background */
-            color: var(--color-white); /* Cor da fonte */
+            .btncontato:hover { /* CSS do botão contato ao passar o mouse */
+                background-color: var(--color-bgh);
+                border: 2px solid var(--color-text);
+                transition-duration: 0.5s;
+                transform: translateY(-3px);
+            }
+
+            .contato_inicio { /* CSS da div do botão contato na parte inicial */
+
+                display: flex;
+                text-align: center; 
+                margin-top: 1rem;
+                margin-left: 14rem;
+                justify-content: center;  
+                
+            }
+
+            .btnzap { /* CSS do botão whatsapp */
+                display: inline-block;
+                font-family: Inter2;
+                color: white;
+                background-color: var(--color-zap);
+                padding: 1rem 1.5rem;
+                border: 2px solid transparent;
+                border-radius: 60px;
+                text-decoration: none;
+                font-weight: 400;
+                align-items: center;
+                transition: all 0.3s ease;
+                animation: fadeIn 2.5s ease-out;
+
+            }
+
+            .btnzap:hover { /* CSS do botão whatsapp ao passar o mouse */
+                background-color: white;
+                color: var(--color-zap);
+                border: 2px solid var(--color-zap);
+                transition-duration: 0.5s;
+                transform: translateY(-3px);
+
+            }
+
+
+            .titulo{ /* CSS da parte de entrada do site */
+                color: var(--color-text);
+                max-width: 900px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                font-size: 22px;
+                font-family: Inter;
+                text-align: left;
+                padding: 2rem 3%;
+                
+            }
+
+            .subtitulo{ /* CSS do subtítulo */
+                color: #828282;
+                font-size: 14px;
+                font-family: Inter2;
+                text-align: left;
+                padding-top: 5px;
+                padding-left: 8px;
+                font-weight: normal;
+            }
+
+            .rodape{ /* CSS do rodapé */
+                background-color: var(--color-bgh);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-family: Inter;
+                width: 100%;
+                height: 120px;
+                position: fixed;  
+                bottom: 0;
+                left: 0;
+                gap: 10px;
+                padding: 10px 20px;
+            }
+            .rodape-container {
+                display: flex;
+                justify-content: space-between; /* separa os lados */
+                align-items: center;
+                flex-wrap: wrap; /* responsivo */
+                gap: 20px;
+            }
             
-        }
-        img{
-            width: 170px; /* Largura da logo */
-        }
-        .header,
-        .navigation_header{
-            display: flex; /* layouts flexível e responsivo, facilitando o alinhamento e a distribuição de elementos dentro de um container */
-            flex-direction: row; /* mudar a forma do display */
-            align-items: center; /* alinhar os items no centro */
-        }
-        .header{
-            background-color: var(--color-bgh);
-            box-shadow: 1px 1px 4px var(--color-white2); /* sombra do header */
-            height: 90px; /* altura do header */
-            justify-content: space-between; /*alinhar os itens de um container flexível no seu eixo principal*/      /* */
-            padding: 0% 10%; /* espaçamento da borda, na direita e esquerda */
-        }
-        .navigation_header{
-            gap: 3em;
-        }
-        /* usa se "a" para referir aos links */
-        .navigation_header a{ /* parte do cabeçalho com os botões */
-            text-decoration: none;
-            color: var(--color-text);
-            transition: 0.0s; /* transição da cor */
-            font-weight: bold; /* Deixar em negrito */
-        }
-        .btnheader {
-            color: var(--color-text);
-            background-color: var(--color-bgh);
-            padding: 8px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            transition-duration: 0.0s; /* transição para mudança de cor dos botões */
-            border: none;
-            border-radius: 60px;
-            cursor: pointer;
-            font-weight: bold;
-            
-        }
-
-
-        button:hover {
-            background-color: rgb(222, 236, 250);
-            border: 2px solid var(--color-text);
-            transition-duration: 0.0s;
-        }
-
-        .btncontato{ /* CSS do botão contato */
-            display: inline-block;
-            font-family: Inter2;
-            color: white;
-            background-color: var(--color-btnc);
-            padding: 1rem 1.5rem;
-            border: 2px solid transparent;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 400;
-        }
-
-        .btncontato:hover { /* CSS do botão contato ao passar o mouse */
-            background-color: var(--color-bgh);
-            border: 2px solid var(--color-text);
-            transition-duration: 0.5s;
-        }
-
-        .contato_inicio { /* CSS da div do botão contato na parte inicial */
-
+            .footer-container {
             display: flex;
-            text-align: center; 
-            margin-top: 1rem;
-            margin-left: 14rem;
-            justify-content: center;  
-            
-         }
-
-        .btnzap { /* CSS do botão whatsapp */
-            display: inline-block;
-            font-family: Inter2;
-            color: white;
-            background-color: var(--color-zap);
-            padding: 1rem 1.5rem;
-            border: 2px solid transparent;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 400;
+            justify-content: space-between; /* separa os lados */
             align-items: center;
-            transition: all 0.3s ease;
-            animation: fadeIn 2.5s ease-out;
+            flex-wrap: wrap; /* responsivo */
+            gap: 20px;
+            }
 
-        }
-
-        .btnzap:hover { /* CSS do botão whatsapp ao passar o mouse */
-            background-color: white;
-            border: 2px solid var(--color-zap);
-            transition-duration: 0.5s;
-            transform: translateY(-3px);
-
-        }
-
-
-        .titulo{ /* CSS da parte de entrada do site */
-            color: var(--color-text);
-            max-width: 900px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-            font-size: 22px;
-            font-family: Inter;
-            text-align: left;
-            padding: 2rem 3%;
-            
-        }
-
-        .subtitulo{ /* CSS do subtítulo */
-            color: #828282;
-            font-size: 14px;
-            font-family: Inter2;
-            text-align: left;
-            padding-top: 5px;
-            padding-left: 8px;
-            font-weight: normal;
-        }
-
-        .rodape{ /* CSS do rodapé */
-            background-color: var(--color-bgh);
-            font-family: Inter;
-            margin-top: 10px;
-            width: 100%;
-            height: 100px;
-            position: fixed;  
-            bottom: 0;
-            left: 0;
-            
-        }
-
-        .endereco{ /* CSS do endereço do rodapé */
+            .contato, .endereco {
             color: var(--color-text);
             font-family: Inter2;
             font-size: 15px;
+            line-height: 1.6;
+            }
+
+            .contato {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            }
+
+            .endereco {
+            align-items: right;
             text-align: center;
-            margin-top: 30px;
-            margin-left: 1300px;
-        }
+            max-width: 400px;
+            }
 
-        .contato{ /* CSS do texto contato no rodapé */
-            color: var(--color-text);
-            font-family: Inter2;
-            margin-top: -20px;
+            .icones{ /* CSS dos ícones no rodapé */
+                display: flex;
+                color: var(--color-text);
+                margin-top: 2px;
+                font-size: 25px;
+                text-align: left;
+            }
+
+            .icones a {
+                color: var(--color-text);
+                margin-right: 15px;
+                transition: 0.3s;
+
+            }
+
+            .icones a:hover {
+                color: var(--color-dark5);
+                transform: translateY(-3px);
+            }
+
+            .imagem_inicio{ /* CSS da imagem inicial */
+                width: 300px;
+                height: auto;
+                position: fixed;
+                top: 50px;
+                right: 400px;
+            }
+            section{
+                color: #1c1c1c;
+            }
+            #sectionserv{  /* CSS da seção de serviços */
+                background-color:var(--color-btnc);
+
+            }
+            #sectionhome{  /* CSS da seção de serviços */
+                background-color:var(--color-white);
+
+            }
+            @media (max-width: 768px) {
+            .rodape {
+            flex-direction: column; /* empilha em telas pequenas */
             text-align: center;
-        }
-
-        .icones{ /* CSS dos ícones no rodapé */
-            margin: 1.5rem;
-            color: var(--color-text);
-            font-size: 25px;
-            margin-top: -30px;
-            margin-left: 20px;
-            text-align: left;
-        }
-
-        .icones a {
-            color: var(--color-text);
-            margin-right: 15px;
-
-        }
-
-        .imagem_inicio{ /* CSS da imagem inicial */
-            width: 300px;
-            height: auto;
-            position: fixed;
-            top: 50px;
-            right: 400px;
-        }
-        section{
-            color: #1c1c1c;
-        }
-        #sectionserv{  /* CSS da seção de serviços */
-            background-color:var(--color-btnc);
-
-        }
-         #sectionhome{  /* CSS da seção de serviços */
-            background-color:var(--color-white);
-
-        }
+            }
+            }
