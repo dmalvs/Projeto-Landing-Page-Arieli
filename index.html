@@ -4,8 +4,27 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Arieli Rigueiro</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/0769dc2cfa.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="style.css">
+            <script src="https://kit.fontawesome.com/0769dc2cfa.js" crossorigin="anonymous"></script>
+
+            <style>
+                .caixa{
+                    background-color: #ffffff;
+                    transition: all 0.4s ease;
+                    border: 2px solid #e0b4d9;
+                    padding: 45px;
+                    border-radius: 30px;
+                    text-align: center;
+                    height: 250px;
+                }
+                .caixa:hover{
+                    cursor: pointer;
+                    transform: translateY(-10px) scale(1.02);
+                    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+
+                }
+            </style>
+
         </head>
         <body>
             <div class="header" id="header">
@@ -91,6 +110,82 @@
                 </div>
             </section>
 
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 30px; color: #5E99DC; font-family: 'Inter';">
+                    Por que escolher meu atendimento?
+                </p>
+
+                <!--organização das caixas-->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; max-width: 1000px; margin: 100px auto;">
+
+                    <!--caixa 1-->
+                    <div class="caixa">
+                        <p style="font-size: 18px; color: #5E99DC; margin: auto; font-family: 'Inter'; margin-bottom: 15px;">
+                        Abordagem individualizada e baseada em evidências
+                        </p>
+                        <p style="color: #444444; font-family: 'Inter2'; font-size: 18px;">
+                            Cada criança é única. O plano terapêutico é construído de forma personalizada, com base em avaliações detalhadas e em métodos cientificamente comprovados.
+                        </p>
+                    </div>
+
+                    <!--caixa 2-->
+                    <div class="caixa">
+                        <p style="font-size: 18px; color: #5E99DC; margin: auto; font-family: 'Inter'; margin-bottom: 15px;">
+                            Olhar global para o desenvolvimento
+                        </p>
+                        <p style="color: #444444; font-family: 'Inter2'; font-size: 18px;">
+                            Mais do que trabalhar a fala, o foco está em comunicar, interagir e se expressar. A linguagem é estimulada em contextos significativos, respeitando e as potencialidades de cada criança.
+                        </p>
+                    </div>
+
+                    <!--caixa 3-->
+                    <div class="caixa">
+                        <p style="font-size: 18px; color: #5E99DC; margin: auto; font-family: 'Inter'; margin-bottom: 15px;">
+                            Parceria com a família
+                        </p>
+                        <p style="color: #444444; font-family: 'Inter2'; font-size: 18px;">
+                            A família é parte essencial do processo terapêutico. São fornecidas orientações práticas, vídeos e devolutivas constantes, para que o progresso continue fora do consultório — no brincar, nas rotinas e nas relações.
+                        </p>
+                    </div>
+
+                    <!--caixa 4-->
+                    <div class="caixa">
+                        <p style="font-size: 18px; color: #5E99DC; margin: auto; font-family: 'Inter'; margin-bottom: 15px;">
+                            Experiência em diferentes quadros clínicos e resultados comprovados
+                        </p>
+                        <p style="color: #444444; font-family: 'Inter2'; font-size: 18px;">
+                            Atuação especializada com crianças com atraso de linguagem, TEA, síndromes genéticas e transtornos dos sons da fala (fonológicos e motores), promovendo ganhos comunicativos e funcionais em diferentes perfis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div style="display: flex; gap: 30px; align-items: flex-start; padding-right: 60px;">
+                
+                <div style="padding-left: 60px; padding-right: 0px">
+                    <p style="margin: 0; font-size: 45px; color: #5E99DC; font-family: 'Inter';">Sobre</p>
+                    <p style="padding-top: 20px; margin: 0; font-size: 25px; color: #5E99DC; font-family: 'Inter';">Quem é Arieli?</p>
+                    <p style="line-height: 1.8; padding-top: 20px; font-size: 18px; color: #444444; font-family: 'Inter2'" >Sou Arieli Rigueiro (CRFa 2-21263), fonoaudióloga graduada pela Universidade do Oeste Paulista (Unoeste) em 2019.
+                    Possuo especialização em Reabilitação Física pela Faculdade de Medicina de São José do Rio Preto (FAMERP) – 2022 e pós-graduação em Análise do Comportamento Aplicada ao Autismo e Deficiência Intelectual (ABA) pelo CBI of Miami – 2024.
+                    <br>
+                    Atuo com avaliação e intervenção fonoaudiológica em linguagem e fala, atendendo crianças com atraso de linguagem, TEA, síndromes genéticas e transtornos fonológicos e motores da fala.
+                    <br>
+                    <br>
+                    Minha prática é guiada por ciência, sensibilidade e parceria com a família, valorizando cada conquista no processo de comunicação da criança.
+                    <br>
+                    <br>
+                    DTTC (Dynamic Temporal and Tactile Cueing) <br>
+                    ReST (Rapid Syllable Transition Treatment) <br>
+                    DIR ® / Floortime™ <br>
+                    PROMPT (Prompts for Restructuring Oral Muscular Phonetic Targets) <br>
+                    PODD (Pragmatic Organisation Dynamic Display) <br>
+                    PECS (Picture Exchange Communication System).
+                    </p>
+                </div>
+                <img src="imagens/Arieli-15.jpg" alt="Foto profissional de Arieli" style="width: 490px; border-radius: 30px; padding-bottom: 30px;">
+            </div>
+            
 
             <footer>
                 <img src="/imagens/wave.svg" style="width: auto;">
