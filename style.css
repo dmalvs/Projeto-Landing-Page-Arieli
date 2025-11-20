@@ -24,6 +24,7 @@
             --color-dark4:  #1c1c1c; /* */
             --color-dark5:  #343434; /* */
             --color-text: #5E99DC; /* cor do texto botão/body */
+            --color-text2: #444444; 
             --color-texth1: #3c7ac2;
             --color-texth1c: #6eacf1;
             --color-btnc: #E0B4D9; /* cor do texto botão contato */
@@ -39,6 +40,7 @@
             font-family: Inter; /* mudar fonte */
             background-color: var(--color-white); /* cor do background */
             color: var(--color-white); /* Cor da fonte */
+    
             
         }
         img{
@@ -126,7 +128,7 @@
         .btnzap { /* CSS do botão whatsapp */
             display: inline-block;
             font-family: Inter2;
-            color: white;
+            color: white; 
             background-color: var(--color-zap);
             padding: 1rem 1.5rem;
             border: 2px solid transparent;
@@ -139,6 +141,12 @@
             
 
         }
+        .btnzap a {
+            color: white;
+            text-decoration: none;
+        
+
+        }
 
         .btnzap:hover { /* CSS do botão whatsapp ao passar o mouse */
             background-color: white;
@@ -146,6 +154,12 @@
             transition-duration: 0.5s;
             transform: translateY(-3px);
             color: var(--color-zap);
+        }
+        *.btnzap a:hover {
+            color: var(--color-zap);
+            text-decoration: none;
+        
+
         }
 
 
@@ -155,16 +169,17 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 1rem;
+            gap: 2rem;
             font-size: 22px;
             font-family: Inter;
             text-align: left;
             padding: 2rem 3%;
+        
             
         }
 
         .subtitulo{ /* CSS do subtítulo */
-            color: #828282;
+            color: var(--color-text2);
             font-size: 14px;
             font-family: Inter2;
             text-align: left;
@@ -174,7 +189,7 @@
         }
 
         footer{
-            background-color: var(--color-text);
+            background-color: var(--color-bgh);
             
             /* 
             background-color: var(--color-bgh);
@@ -221,7 +236,7 @@
             justify-content: center;
             width: 45px;
             height: 40px;
-            background-color: #fff;
+            background-color: transparent;
             font-size: 1.25rem;
             border-radius: 10px;
             text-decoration: none;
@@ -236,7 +251,7 @@
         }
 
         .endereco{ /* CSS do endereço do rodapé */
-            color: var(--color-white);
+            color: var(--color-text);
             font-family: Inter2;
             font-size: 15px;
             text-align: left;
@@ -245,7 +260,7 @@
         }
 
         .contato{ /* CSS do texto contato no rodapé */
-            color: var(--color-white);
+            color: var(--color-text);
             font-family: Inter2;
             
             text-align: center;
@@ -267,14 +282,12 @@
         }
 
         .imagem_inicio{ /* CSS da imagem inicial */
-            width: 300px;
-            height: auto;
-            top: 50px;
-            left: 830px;
-            display: block;
-            margin-left: auto;
-            
-            
+           width: 500px;
+           height: auto;
+           align-items: right;
+           position: absolute;
+           top: 0.5rem;
+           right: 20rem;
         }
         section{
             color: #1c1c1c;
@@ -399,7 +412,7 @@
             margin: 0 auto;
             padding: 20px;
             display: flex;
-            align-items: stretch;
+            align-items: center;
             justify-content: center;
             flex-wrap: wrap ;
             gap: 20px;
@@ -411,7 +424,7 @@
             gap: 20px;
             padding: 10px;
             width: 320px;
-            background-color: var(--color-white);
+            background-color: transparent;
             margin: 20px;
             border-radius: 20px;
             overflow: hidden;
@@ -428,14 +441,14 @@
             font-size: 20px;
         }
         .container .card p{
-            color: var(--color-white2);
+            color: var(--color-text2);
             font-size: 20px;
         }
 
         .container .cardfala{
             padding: 10px;
             width: 300px;
-            background-color: var(--color-white);
+            background-color: transparent;
             margin: 20px;
             border-radius: 20px;
             overflow: hidden;
@@ -452,7 +465,7 @@
              20px;
         }
         .container .cardfala p{
-            color: var(--color-white2);
+            color: var(--color-text2);
             font-size: 20px;
         }
         .containerben {
