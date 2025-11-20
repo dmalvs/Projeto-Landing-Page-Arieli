@@ -70,6 +70,8 @@
             transition: 0.0s; /* transição da cor */
             font-weight: bold; /* Deixar em negrito */
         }
+
+        
         .btnheader {
             color: var(--color-text);
             background-color: var(--color-bgh);
@@ -278,19 +280,123 @@
             color: #1c1c1c;
         }
         #sectionserv{  /* CSS da seção de serviços */
-
-        }
-         #sectionhome{  /* CSS da seção de serviços */
             background-color:var(--color-white);
 
+
+        }
+         #sectionhome{  /* CSS da seção de home */
+            background-color:var(--color-white);
+
+        }
+        #sectionben{ /* CSS da seção beneficios */
+            display: flex;
+            justify-content: center;
         }
         .sectionserv.active{
             color: #3a6eaa;
             border-bottom: 3px solid #162435;
         }
+        /* ===== Sobre - layout adaptativo com imagem mobile acima do texto ===== */
+
+#sectionsobre {
+  padding: 60px 24px;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;   /* Alinha imagem e texto na mesma altura */
+    gap: 40px;
+}
+
+
+/* Texto */
+.sobre-texto {
+  flex: 1 1 60%;
+}
+.sobre-texto h1 {
+  font-size: 45px;
+  color: #5E99DC;
+  margin: 0 0 8px 0;
+  font-family: 'Inter';
+}
+.sobre-texto h2 {
+  font-size: 25px;
+  color: #5E99DC;
+  margin: 6px 0 20px 0;
+  font-family: 'Inter';
+}
+.sobre-texto p {
+  font-size: 18px;
+  color: #444444;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-family: 'Inter2';
+}
+
+/* Imagens */
+.sobre-imagem img {
+  display: block;
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Visibilidade por padrão (desktop) */
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: block;
+  flex: 0 0 420px;
+}
+
+/* ===== Breakpoint mobile: imagem do início aparece acima do texto ===== */
+@media (max-width: 900px) {
+  .sobre-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    padding: 24px 16px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+    width: 160px;        /* tamanho da imagem mobile (ajuste se quiser maior/menor) */
+    max-width: 70%;
+  }
+  .mobile-only img {
+    width: 260px;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 8px;
+  }
+
+  .sobre-texto {
+    order: 2; /* garante que o texto venha depois da imagem mobile (ela está antes no HTML já) */
+    width: 100%;
+  }
+
+  .sobre-texto h1 {
+    font-size: 32px;
+  }
+  .sobre-texto h2 {
+    font-size: 20px;
+  }
+  .sobre-texto p {
+    font-size: 16px;
+  }
+}
+
 
         .container{
-            width: 1150px;
+            max-width: 1150px;
+            width: 100%;
+            margin: 0 auto;
             padding: 20px;
             display: flex;
             align-items: stretch;
@@ -311,7 +417,7 @@
             overflow: hidden;
             transition: 0.5s;
             text-align: center;
-            transform: translateY(50px);  /* ajusta quanto quer baixar */
+            transform: translateY(70px);  /* ajusta quanto quer baixar */
 
         }
         .container .card img{
@@ -342,45 +448,135 @@
         }
         .container .cardfala h1{
             color: var(--color-texth1c);
-            font-size: 20px;
+            font-size:
+             20px;
         }
         .container .cardfala p{
             color: var(--color-white2);
             font-size: 20px;
         }
+        .containerben {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 50px; 
+            max-width: 1000px; 
+            margin: 100px auto;
+
+    
+}
+
+        .caixa{
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                    width: 100%;
+                    background-color: #ffffff;
+                    transition: all 0.4s ease;
+                    border: 2px solid #e0b4d9;
+                    padding: 45px;
+                    border-radius: 30px;
+                    text-align: center;
+                    height: auto;
+                }
+                .caixa:hover{
+                    cursor: pointer;
+                    transform: translateY(-10px) scale(1.02);
+                    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+
+                }
         @media (max-width: 900px) {
-            /* reorganiza em colunas em tablets e celulares grandes */
-            #footer_items{
-                flex-direction: column; 
-                text-align: center; 
-                gap: 12px; 
-            }
-            /* se quiser esconder algo já neste breakpoint: */
-            .hide-mobile{
-                 display: none; 
-            } /* tablet/phone */
+        .container {
+            padding: 14px;
+            gap: 12px;
+        }
+        .container .card,
+        .container .cardfala {
+            flex: 1 1 100%;
+            max-width: 100%;
+            width: 100%;
+            padding: 14px;
+            border-radius: 16px;
+            transform: translateY(0);
+        }
+        .container .card img,
+        .container .cardfala img {
+            width: 88px;
+            margin-bottom: 8px;
+        }
+        .container .card h1,
+        .container .cardfala h1 {
+            font-size: 18px;
+        }
+        .container .card p,
+        .container .cardfala p {
+            font-size: 15px;
+        }
+        /* reorganiza em colunas em tablets e celulares grandes */
+        #footer_items{
+            flex-direction: column; 
+            text-align: center; 
+            gap: 12px; 
+        }
+        /* se quiser esconder algo já neste breakpoint: */
+        .hide-mobile{
+                display: none; 
+        } /* tablet/phone */
         }
         @media screen and (max-width: 600px){ /* Ajuste mobile */
             
+        .container {
+            padding: 14px;
+            gap: 12px;
+        }
+        .container .card,
+        .container .cardfala {
+            flex: 1 1 100%;
+            max-width: 100%;
+            width: 100%;
+            padding: 14px;
+            border-radius: 16px;
+            transform: translateY(0);
+        }
+        .container .card img,
+        .container .cardfala img {
+            width: 88px;
+            margin-bottom: 8px;
+        }
+        .container .card h1,
+        .container .cardfala h1 {
+            font-size: 18px;
+        }
+        .container .card p,
+        .container .cardfala p {
+            font-size: 15px;
+        }
+        .containerben {
+            display: grid;
+    grid-template-columns: 1fr; /* uma caixa abaixo da outra */
+    gap: 50px;
+    max-width: 1000px;
+    margin: 100px auto;
+            
+        }
+        
 
-                /* mobile comum: esconda endereço completo */
-                 .hide-mobile{ 
-                    display: none; 
-                }
-                /* opcional: esconda o email em telas menores */
+        /* mobile comum: esconda endereço completo */
+        .hide-mobile{ 
+            display: none; 
+        }
+        /* opcional: esconda o email em telas menores */
 
-                .hide-smaller{ 
-                    display: none; 
-                }
+        .hide-smaller{ 
+            display: none; 
+        }
 
-                /* ajustar tamanho dos botões sociais para caber melhor */
-                .social-media-buttons a{ 
-                    width: 40px; 
-                    height: 36px; 
-                    font-size: 1.05rem; 
-                }
-                
+        /* ajustar tamanho dos botões sociais para caber melhor */
+        .social-media-buttons a{ 
+            width: 40px; 
+            height: 36px; 
+            font-size: 1.05rem; 
         }   
+         }   
         @media screen and (max-width: 1170px){
 
 

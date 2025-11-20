@@ -7,24 +7,6 @@
             <link rel="stylesheet" href="style.css">
             <script src="https://kit.fontawesome.com/0769dc2cfa.js" crossorigin="anonymous"></script>
 
-            <style>
-                .caixa{
-                    background-color: #ffffff;
-                    transition: all 0.4s ease;
-                    border: 2px solid #e0b4d9;
-                    padding: 45px;
-                    border-radius: 30px;
-                    text-align: center;
-                    height: 250px;
-                }
-                .caixa:hover{
-                    cursor: pointer;
-                    transform: translateY(-10px) scale(1.02);
-                    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-
-                }
-            </style>
-
         </head>
         <body>
             <div class="header" id="header">
@@ -33,10 +15,14 @@
                 </div>
                 <!--Opções do cabeçalho-->
                     <div class="navigation_header"> 
-                        <button class="btnheader"><a href="#">Home</a></button>
-                        <button class="btnheader">Sobre</button>
-                        <button class="btnheader"><a href="#">Benefícios</a></button>
-                        <button class="btnheader" id="scrollButtonserv"><a href="#">Serviços</a></button>
+                        <button class="btnheader" id="scrollButtonhome">Home</button> 
+
+                        <button class="btnheader" id="scrollButtonserv">Serviços</button>
+                        
+                        <button class="btnheader" id="scrollButtonben">Benefícios</button>
+
+                        <button class="btnheader" id="scrollButtonsobre">Sobre</button>
+                        
                         <button class="btncontato"><a href="#">Contato</a></button>
                     </div>
             </div>
@@ -110,13 +96,14 @@
                 </div>
             </section>
 
+            <!--BENEFIÍCIOS-->
+            <section id="sectionben">
             <div style="text-align: center; margin-top: 40px;">
                 <p style="font-size: 30px; color: #5E99DC; font-family: 'Inter';">
                     Por que escolher meu atendimento?
                 </p>
-
+                <div class="containerben">
                 <!--organização das caixas-->
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; max-width: 1000px; margin: 100px auto;">
 
                     <!--caixa 1-->
                     <div class="caixa">
@@ -159,36 +146,50 @@
                     </div>
                 </div>
             </div>
+            </section>
 
-            
-            <div style="display: flex; gap: 30px; align-items: flex-start; padding-right: 60px;">
-                
-                <div style="padding-left: 60px; padding-right: 0px">
-                    <p style="margin: 0; font-size: 45px; color: #5E99DC; font-family: 'Inter';">Sobre</p>
-                    <p style="padding-top: 20px; margin: 0; font-size: 25px; color: #5E99DC; font-family: 'Inter';">Quem é Arieli?</p>
-                    <p style="line-height: 1.8; padding-top: 20px; font-size: 18px; color: #444444; font-family: 'Inter2'" >Sou Arieli Rigueiro (CRFa 2-21263), fonoaudióloga graduada pela Universidade do Oeste Paulista (Unoeste) em 2019.
-                    Possuo especialização em Reabilitação Física pela Faculdade de Medicina de São José do Rio Preto (FAMERP) – 2022 e pós-graduação em Análise do Comportamento Aplicada ao Autismo e Deficiência Intelectual (ABA) pelo CBI of Miami – 2024.
-                    <br>
-                    Atuo com avaliação e intervenção fonoaudiológica em linguagem e fala, atendendo crianças com atraso de linguagem, TEA, síndromes genéticas e transtornos fonológicos e motores da fala.
-                    <br>
-                    <br>
-                    Minha prática é guiada por ciência, sensibilidade e parceria com a família, valorizando cada conquista no processo de comunicação da criança.
-                    <br>
-                    <br>
-                    DTTC (Dynamic Temporal and Tactile Cueing) <br>
-                    ReST (Rapid Syllable Transition Treatment) <br>
-                    DIR ® / Floortime™ <br>
-                    PROMPT (Prompts for Restructuring Oral Muscular Phonetic Targets) <br>
-                    PODD (Pragmatic Organisation Dynamic Display) <br>
-                    PECS (Picture Exchange Communication System).
-                    </p>
-                </div>
-                <img src="imagens/Arieli-15.jpg" alt="Foto profissional de Arieli" style="width: 490px; border-radius: 30px; padding-bottom: 30px;">
+        <!--SOBRE-->
+        <section id="sectionsobre">
+        <div class="sobre-container">
+
+            <!-- Imagem que aparece SOMENTE em celulares (vinda da seção inicial) -->
+            <div class="sobre-imagem mobile-only">
+            <img src="imagens/Arieli-15.jpg" alt="Arieli - versão mobile">
             </div>
+
+            <!-- Texto -->
+            <div class="sobre-texto">
+            <h1>Sobre</h1>
+            <h2>Quem é Arieli?</h2>
+
+            <p>Sou Arieli Rigueiro (CRFa 2-21263), fonoaudióloga graduada pela Universidade do Oeste Paulista (Unoeste) em 2019.
+            Possuo especialização em Reabilitação Física pela Faculdade de Medicina de São José do Rio Preto (FAMERP) – 2022 e pós-graduação em Análise do Comportamento Aplicada ao Autismo e Deficiência Intelectual (ABA) pelo CBI of Miami – 2024.</p>
+
+            <p>Atuo com avaliação e intervenção fonoaudiológica em linguagem e fala, atendendo crianças com atraso de linguagem, TEA, síndromes genéticas e transtornos fonológicos e motores da fala.</p>
+
+            <p>Minha prática é guiada por ciência, sensibilidade e parceria com a família, valorizando cada conquista no processo de comunicação da criança.</p>
+
+            <p><strong>Formações complementares:</strong><br>
+            DTTC (Dynamic Temporal and Tactile Cueing) <br>
+            ReST (Rapid Syllable Transition Treatment) <br>
+            DIR® / Floortime™ <br>
+            PROMPT <br>
+            PODD <br>
+            PECS</p>
+            
+            </div>
+
+            <!-- Imagem que aparece SOMENTE em desktop/tablet (foto profissional) -->
+            <div class="sobre-imagem desktop-only">
+            <img src="imagens/Arieli-15.jpg" alt="Foto profissional de Arieli">
+            </div>
+
+        </div>
+        </section>
             
 
             <footer>
-                <img src="/imagens/wave.svg" style="width: auto;">
+                <img src="/imagens/wave.svg" style="width: 100%;">
 
                     
                 
@@ -224,20 +225,38 @@
             <!--JAVASCRIPT-->
 
             <script>
+
+                
             // Seleciona o botão e a seção de destino
             const buttonserv = document.getElementById('scrollButtonserv');
             const buttonhome = document.getElementById('scrollButtonhome');
-            const targetSectionhome = document.getElementById('sectionhome');
+            const buttonben = document.getElementById('scrollButtonben');
+            const buttonsobre = document.getElementById('scrollButtonsobre');
+
             const targetSection = document.getElementById('sectionserv');
+            const targetSectionhome = document.getElementById('sectionhome');
+            const targetSectionben = document.getElementById('sectionben');
+            const targetSectionsobre = document.getElementById('sectionsobre');
 
             // Adiciona o evento de clique ao botão
             buttonserv.addEventListener('click', () => {
             // Rola suavemente até a seção de destino
             targetSection.scrollIntoView({ behavior: 'smooth' });
             });
+
             buttonhome.addEventListener('click', () => {
             // Rola suavemente até a seção de destino
             targetSectionhome.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            buttonben.addEventListener('click', () => {
+            // Rola suavemente até a seção de destino
+            targetSectionben.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            buttonsobre.addEventListener('click', () => {
+            // Rola suavemente até a seção de destino
+            targetSectionsobre.scrollIntoView({ behavior: 'smooth' });
             });
         </script>
         </body>
