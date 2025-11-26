@@ -40,7 +40,7 @@ body {
     overflow-x: hidden;
 }
 
-/*  HEADER RESPONSIVO  */
+/*  HEADER */
 .header {
     background-color: var(--color-bgh);
     box-shadow: 1px 1px 4px var(--color-white2);
@@ -120,7 +120,7 @@ body {
 }
 
 
-/* SERVIÇOS RESPONSIVO */
+/* SERVIÇOS */
 #sectionserv {
     padding: 80px 5%;
     background-color: var(--color-white);
@@ -176,7 +176,7 @@ body {
         font-family: 'Inter2';
     }
 
-/* BENEFÍCIOS RESPONSIVO  */
+/* BENEFÍCIOS */
 #beneficios {
     padding: 80px 5%;
     text-align: center;
@@ -228,21 +228,71 @@ body {
         line-height: 1.6;
     }
 
-/* SOBRE RESPONSIVO  */
+/* SOBRE */
+/* SOBRE RESPONSIVO CORRIGIDO */
 #sobre {
     padding: 80px 5%;
 }
 
-.sobre-content {
+.sobre-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 60px;
 }
 
-/* BOTÕES RESPONSIVOS */
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-titulo {
+    margin: 0;
+    font-size: 45px;
+    color: #5E99DC;
+    font-family: 'Inter';
+}
+
+.sobre-subtitulo {
+    padding-top: 20px;
+    margin: 0;
+    font-size: 25px;
+    color: #5E99DC;
+    font-family: 'Inter';
+}
+
+.sobre-conteudo p {
+    line-height: 1.8;
+    padding-top: 20px;
+    font-size: 18px;
+    color: #444444;
+    font-family: 'Inter2';
+}
+
+/* IMAGEM DESKTOP - visível apenas no desktop */
+.sobre-imagem-desktop {
+    flex-shrink: 0;
+}
+
+.sobre-imagem-desktop img {
+    width: 490px;
+    border-radius: 30px;
+}
+
+/* IMAGEM MOBILE - visível apenas no mobile */
+.sobre-imagem-mobile {
+    display: none;
+}
+
+.sobre-imagem-mobile img {
+    width: 100%;
+    max-width: 490px;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+/* BOTÕES */
 .btn {
     padding: clamp(10px, 3vw, 12px) clamp(20px, 4vw, 24px);
     border: none;
@@ -316,17 +366,13 @@ body {
 
  .rodape{ /* CSS do rodapé */
     background-color: var(--color-bgh);
-    display: flex;
     align-items: center;
-    justify-content: space-between;
     font-family: Inter;
     width: 100%;
-    height: 140px;
+    height: 100%;
     position: relative;  
-    bottom: 0;
-    left: 0;
     gap: 10px;
-    padding: 10px 20px;
+    padding: 10px 
     }
 
  .rodape-container {
@@ -386,6 +432,58 @@ body {
             .icones a:hover {
                 transform: translateY(-3px);
             }
+    /* BENEFÍCIOS */
+#beneficios {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+#beneficios > div > p {
+    font-size: clamp(24px, 4vw, 30px);
+    color: #5E99DC;
+    font-family: 'Inter';
+    margin-bottom: 40px;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.caixa {
+    background-color: #ffffff;
+    transition: all 0.4s ease;
+    border: 2px solid #e0b4d9;
+    padding: 30px 25px;
+    border-radius: 20px;
+    text-align: center;
+    height: auto;
+}
+
+.caixa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.caixa p:first-child {
+    font-size: 18px;
+    color: #5E99DC;
+    margin-bottom: 15px;
+    font-family: 'Inter';
+    font-weight: bold;
+}
+
+.caixa p:last-child {
+    color: var(--color-text2);
+    font-family: 'Inter2';
+    font-size: 16px;
+    line-height: 1.6;
+}        
+
 
 /*  MEDIA QUERIES  */
 
@@ -428,6 +526,10 @@ body {
         flex-wrap: wrap;
     }
 
+    .logo_header {
+        text-align: center;
+        width: 100%;
+    }
     .navigation_header {
         gap: 1em;
         flex-wrap: wrap;
@@ -436,32 +538,72 @@ body {
         width: 100%;
     }
 
-        .navigation_header a {
+    .navigation_header a {
             font-size: 14px;
             padding: 6px 12px;
-        }
+    }
 
-    .sobre-content {
-        flex-direction: column;
+    #sobre > div {
+        flex-direction: column !important;
+        padding: 0 20px !important;
         text-align: center;
+        gap: 0 !important;
     }
-
-    .sobre-imagem {
-        order: -1;
+    
+    #sobre > div > div {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100%;
     }
-
-        .sobre-imagem img {
-            max-width: 300px;
-        }
+    
+    #sobre img {
+        order: 2;
+        width: 100% !important;
+        max-width: 400px;
+        margin: 40px auto 0 auto !important;
+        display: block;
+    }
+    
+    #sobre > div > div {
+        order: 1;
+    }
+    
+    #sobre p[style*="font-size: 45px"] {
+        font-size: 35px !important;
+    }
+    
+    #sobre p[style*="font-size: 25px"] {
+        font-size: 22px !important;
+    }
+    
+    #sobre p[style*="font-size: 18px"] {
+        font-size: 16px !important;
+    }
 
     .beneficios-grid {
         grid-template-columns: 1fr;
         gap: 20px;
-        padding: 0 10px;
+        padding: 0 15px; 
     }
 
     .caixa {
         padding: 25px 20px;
+    }
+
+     .rodape-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .contato, .endereco {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .icones {
+        justify-content: center;
+        margin-top: 15px;
     }
 }
 
