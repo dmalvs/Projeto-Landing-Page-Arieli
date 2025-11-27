@@ -1,4 +1,5 @@
 
+/* Definindo as fontes do projeto */
 @font-face {
     font-family: 'Inter';
     src: url(font/Inter-Bold.ttf);
@@ -9,12 +10,7 @@
     src: url(font/InterVariable.ttf);
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Definindo as variáveis de cores no projeto */
 
 :root {
     --color-white: #fff;
@@ -32,6 +28,11 @@
     --color-zap: #62C370;
 }
 
+* { /* * seleciona todos os elementos da página e remove qualquer margem e padding */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Inter';
@@ -65,12 +66,12 @@ body {
     align-items: center;
 }
 
-    .navigation_header a {
+.navigation_header a {
         text-decoration: none;
         color: var(--color-text);
         font-weight: bold;
         white-space: nowrap;
-    }
+}
 
 /* SEÇÃO HOME */
 #sectionhome {
@@ -91,14 +92,14 @@ body {
 }
 
     .titulo h1 {
-        font-size: clamp(28px, 4vw, 42px);
+        font-size: clamp(28px, 4vw, 42px); /* clamp é para deixar mais responsivo, vw é viewport width, serve para responsividade tbm */
         line-height: 1.3;
         font-family: 'Inter';
     }
 
 .subtitulo {
     color: var(--color-text2);
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: clamp(12px, 2vw, 14px); /* clamp é para deixar mais responsivo, vw é viewport width, serve para responsividade tbm */
     font-family: 'Inter2';
     font-weight: normal;
     line-height: 1.6;
@@ -127,7 +128,7 @@ body {
 }
 
     #sectionserv h1 {
-        font-size: clamp(32px, 5vw, 40px);
+        font-size: clamp(32px, 5vw, 40px); /* clamp é para deixar mais responsivo, vw é viewport width, serve para responsividade tbm */
         color: var(--color-text);
         text-align: center;
         margin-bottom: 60px;
@@ -183,15 +184,15 @@ body {
 }
 
     #beneficios > div > p {
-        font-size: clamp(24px, 4vw, 30px);
-        color: #5E99DC;
+        font-size: clamp(24px, 4vw, 30px); /* clamp é para deixar mais responsivo, vw é viewport width, serve para responsividade tbm */
+        color: var(--color-text);
         font-family: 'Inter';
         margin-bottom: 40px;
     }
 
 .beneficios-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* cria um grid que se adapta (autofit), cada coluna com no mínimo 300px e max 1 fração  de espaço */
     gap: 30px;
     max-width: 1000px;
     margin: 0 auto 50px;
@@ -201,7 +202,7 @@ body {
 .caixa {
     background-color: #ffffff;
     transition: all 0.4s ease;
-    border: 2px solid #e0b4d9;
+    border: 2px solid var(--color-btnc);
     padding: 30px 25px;
     border-radius: 20px;
     text-align: center;
@@ -215,7 +216,7 @@ body {
 
     .caixa p:first-child {
         font-size: 18px;
-        color: #5E99DC;
+        color: var(--color-text);
         margin-bottom: 15px;
         font-family: 'Inter';
         font-weight: bold;
@@ -229,7 +230,6 @@ body {
     }
 
 /* SOBRE */
-/* SOBRE RESPONSIVO CORRIGIDO */
 #sobre {
     padding: 80px 5%;
 }
@@ -250,7 +250,7 @@ body {
 .sobre-titulo {
     margin: 0;
     font-size: 45px;
-    color: #5E99DC;
+    color: var(--color-text);
     font-family: 'Inter';
 }
 
@@ -258,7 +258,7 @@ body {
     padding-top: 20px;
     margin: 0;
     font-size: 25px;
-    color: #5E99DC;
+    color: var(--color-text);
     font-family: 'Inter';
 }
 
@@ -266,35 +266,13 @@ body {
     line-height: 1.8;
     padding-top: 20px;
     font-size: 18px;
-    color: #444444;
+    color: var(--color-text2);
     font-family: 'Inter2';
-}
-
-/* IMAGEM DESKTOP - visível apenas no desktop */
-.sobre-imagem-desktop {
-    flex-shrink: 0;
-}
-
-.sobre-imagem-desktop img {
-    width: 490px;
-    border-radius: 30px;
-}
-
-/* IMAGEM MOBILE - visível apenas no mobile */
-.sobre-imagem-mobile {
-    display: none;
-}
-
-.sobre-imagem-mobile img {
-    width: 100%;
-    max-width: 490px;
-    border-radius: 30px;
-    margin-top: 30px;
 }
 
 /* BOTÕES */
 .btn {
-    padding: clamp(10px, 3vw, 12px) clamp(20px, 4vw, 24px);
+    padding: clamp(10px, 3vw, 12px) clamp(20px, 4vw, 24px); /* clamp é para deixar mais responsivo, vw é viewport width, serve para responsividade tbm */
     border: none;
     border-radius: 25px;
     font-size: clamp(14px, 2vw, 16px);
@@ -309,14 +287,14 @@ body {
 
 .btn-tertiary {
     font-family: 'Inter2';
-    background-color: #62C370;
+    background-color: var(--color-zap);
     color: #fff;
-    border: 2px solid #62C370;
+    border: 2px solid var(--color-zap);
 }
 
     .btn-tertiary:hover {
         background-color: transparent;
-        color: #62C370;
+        color: var(--color-zap);
         transform: translateY(-2px);
     }
 
@@ -362,9 +340,9 @@ body {
         box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
     }
 
-/*  RODAPÉ RESPONSIVO  */
+/*  RODAPÉ */
 
- .rodape{ /* CSS do rodapé */
+ .rodape{ 
     background-color: var(--color-bgh);
     align-items: center;
     font-family: Inter;
@@ -386,68 +364,82 @@ body {
     }
          
             
-    .footer-container {
+.footer-container {
+
         display: flex;
         justify-content: space-between; /* separa os lados */
         align-items: center;
         flex-wrap: wrap; /* responsivo */
         gap: 20px;
+
+    }
+
+    .contato, .endereco {
+
+        color: var(--color-text);
+        font-family: Inter2;
+        font-size: 15px;
+        line-height: 1.6;
+
+    }
+
+    .contato {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+
+    }
+    .endereco {
+
+        align-items: left;
+        text-align: center;
+        max-width: 400px;
+
+    }
+
+    .icones {             /* CSS dos ícones no rodapé */
+        display: flex;
+        color: var(--color-text);
+        margin-top: 0px;
+        font-size: 25px;
+        text-align: left;
+        align-items: center;
+
         }
 
-            .contato, .endereco {
-            color: var(--color-text);
-            font-family: Inter2;
-            font-size: 15px;
-            line-height: 1.6;
-            }
+    .icones a {
 
-            .contato {
-            display: flex;
-            flex-direction: column;
-            gap: 1px;
-            }
+        color: var(--color-text);
+        margin-right: 15px;
+        transition: 0.3s;
 
-            .endereco {
-            align-items: left;
-            text-align: center;
-            max-width: 400px;
-            }
+    }
 
-            .icones{ /* CSS dos ícones no rodapé */
-                display: flex;
-                color: var(--color-text);
-                margin-top: 0px;
-                font-size: 25px;
-                text-align: left;
-                align-items: center;
-            }
+    .icones a:hover {
 
-            .icones a {
-                color: var(--color-text);
-                margin-right: 15px;
-                transition: 0.3s;
+        transform: translateY(-3px);
 
             }
 
-            .icones a:hover {
-                transform: translateY(-3px);
-            }
-    /* BENEFÍCIOS */
+
+/* BENEFÍCIOS */
+
 #beneficios {
     padding: 80px 5%;
     text-align: center;
 }
 
 #beneficios > div > p {
-    font-size: clamp(24px, 4vw, 30px);
-    color: #5E99DC;
+    font-size: clamp(24px, 4vw, 30px); /* clamp é para deixar mais responsivo, vw é viewport width, serve para responsividade tbm */
+    color: var(--color-text);
     font-family: 'Inter';
     margin-bottom: 40px;
 }
 
 .beneficios-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* cria um grid de 2 colunas, repete duas vezes 1 fração, isto é pro mobile ficar uma caixa em baixo da outra */
     gap: 30px;
     max-width: 1000px;
     margin: 0 auto 50px;
@@ -457,7 +449,7 @@ body {
 .caixa {
     background-color: #ffffff;
     transition: all 0.4s ease;
-    border: 2px solid #e0b4d9;
+    border: 2px solid var(--color-btnc);
     padding: 30px 25px;
     border-radius: 20px;
     text-align: center;
@@ -471,7 +463,7 @@ body {
 
 .caixa p:first-child {
     font-size: 18px;
-    color: #5E99DC;
+    color: var(--color-text);
     margin-bottom: 15px;
     font-family: 'Inter';
     font-weight: bold;
@@ -487,7 +479,6 @@ body {
 
 /*  MEDIA QUERIES  */
 
-/* Tablets */
 @media (max-width: 1024px) {
     .header {
         padding: 20px 5%;
@@ -518,7 +509,7 @@ body {
     }
 }
 
-/* Tablets Pequenos e Mobile Grande */
+/* mobile 1 */
 @media (max-width: 768px) {
     .header {
         height: auto;
@@ -607,7 +598,7 @@ body {
     }
 }
 
-/* Mobile */
+/* mobile 2 */
 @media (max-width: 480px) {
     .logo_header img {
         width: 140px;
@@ -658,7 +649,7 @@ body {
     }
 }
 
-/* Mobile Muito Pequeno */
+/* mobile 3 */
 @media (max-width: 360px) {
     .navigation_header {
         flex-direction: column;
